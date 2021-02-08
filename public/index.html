@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monkey ASCII</title>
+    <meta name="author" content="Julien Maury" />
+    <meta name="description" content="Monkey ASCII" />
+    <link rel="stylesheet" href="dist/style.css" media="all">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script defer src="js/img2ascii.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+    <!--
+──▄▄▀▀█▀▀▄▄─────
+─▐▄▌─▀─▀─▐▄▌────
+───█─▄▄▄─█──▄▄──
+───▄█▄▄▄█▄─▐──▌─
+─▄█▀█████▐▌─▀─▐─
+─▀─▄██▀██▀█▀▄▄▀
+-->
+    <div id="app">
+        <h1 class="text-center text-2xl md:text-4xl my-16">Convert <em>your image</em> into ASCII</h1>
+        <div id="intro" class="w-full px-8 md:w-1/3 md:mx-auto">
+            <p class="mb-4 text-xl">
+                Hello and welcome to monkey ASCII.
+            </p>
+            <p class="mb-16 text-xl">
+                Drop an image and get a pretty cool ASCII draw.
+            </p>
+        </div>
+        <form class="w-full md:flex md:w-2/3 md:items-stretch md:justify-center bg-grey-lighter" action="/"
+            method="post" enctype="multipart/form-data">
+            <div class="md:w-2/3 md:text-right">
+                <pre class="monkey">
+                ──▄▄▀▀█▀▀▄▄─────
+                ─▐▄▌─▀─▀─▐▄▌────
+                ───█─▄▄▄─█──▄▄──
+                ───▄█▄▄▄█▄─▐──▌─
+                ─▄█▀█████▐▌─▀─▐─
+                ─▀─▄██▀██▀█▀▄▄▀
+                </pre>
+            </div>
+            <label id="dropbox" for="upload"
+                class="mx-8 md:w-1/3 md:mx-0 flex flex-col items-center px-4 py-6 bg-white text-black rounded-lg shadow-lg tracking-wide uppercase border border-black cursor-pointer hover:bg-black hover:text-white">
+                <svg aria-hidden="true" class="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20">
+                    <path
+                        d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                </svg>
+                <span class="mt-2 text-xl leading-normal">Drop a file</span>
+                <input id="upload" type="file" class="hidden" name="upload" multiple accept="image/*" />
+            </label>
+        </form>
+        <div class="mt-8 text-center" id="results"></div>
+    </div>
+</body>
+
+</html>

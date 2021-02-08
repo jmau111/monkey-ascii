@@ -1,0 +1,10 @@
+spec:
+  name: monkey-ascii
+  services:
+    - name: web
+      git:
+        branch: master
+        repo_clone_url: https://github.com/jmau111/monkey-ascii.git
+      envs:
+        - key: NODE_ENV
+          value: "production"

@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+
+body {
+  font-family: Papyrus, fantasy;
+  font-size: 22px;
+  background-color: #fff;
+  background-image: linear-gradient(
+      90deg,
+      transparent 154px,
+      #D49CA9 154px,
+      #D49CA9 157px,
+      transparent 157px
+    ),
+    linear-gradient(#eee 0.1em, transparent 0.1em);
+  background-size: 100% 1.2em;
+}
+
+pre:not(.monkey) {
+  margin-left: 154px;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+@media screen and (max-width: 768px) {
+  pre:not(.monkey) {
+    margin-left: 0;
+  }
+}
+
+.monkey {
+  font-size: smaller;
+}
+
+h1 {
+  background-color: #ffff66;
+}
+
+p {
+  line-height: 1.2em;
+}
+
+.error {
+  margin-top: 22px;
+  color: red;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.final {
+  border: none;
+  margin-top: 22px;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 1.125rem;
+  padding: 0;
+  opacity: 0.7;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212;
+  color: #fafafa;
+  border-radius: 0.15em;
+  padding: 0.35em 0.75em 0.25em;
+  font-size: clamp(3rem, 5vw, 4rem);
+  text-align: center;
+  line-height: 1;
+  font-weight: 500;
+  transition: 180ms all ease-in-out;
+  grid-area: buddy;
+  justify-self: center;
+}
+
+.final .face {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.25em;
+  transform: translateY(-0.05em);
+}
+.final .face svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-10deg);
+}
+.final .face svg path {
+  transition: all 180ms ease-in;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .final {
+    border: 2px solid currentColor;
+  }
+}
+
+.final:focus,
+.final:hover {
+  outline-style: solid;
+  outline-color: transparent;
+  opacity: 1;
+}
+
+@tailwind utilities;
