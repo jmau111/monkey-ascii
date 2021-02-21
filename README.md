@@ -14,10 +14,6 @@ Made just for fun and celebrate the hackathon
 
 https://monkey-ascii-wcs8f.ondigitalocean.app/
 
-<a href="https://cloud.digitalocean.com/apps/new?repo=https://github.com/jmau111/monkey-ascii/tree/master">
- <img src="https://mp-assets1.sfo2.digitaloceanspaces.com/deploy-to-do/do-btn-blue-ghost.svg" alt="Deploy to DO">
-</a>
-
 ## screenshot
 
 before : 
